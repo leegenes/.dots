@@ -1,9 +1,9 @@
-# PACMAN
+# PAMAC
 # manjaro-tools
-# yay-git
+# base-devel
 # bluez
 # bluez-utils
-# bluetuith
+# (maybe) bluetuith
 # zsh (with extra schtuff)
 # zsh-powerlevel10k-theme
 # firefox
@@ -11,17 +11,9 @@
 # (maybe) firefox-tridactyl-native
 # vscode
 # xcape
-
-
-# YAY
-# spotify (AUR currently broken used --editmenu)
-# base-devel
-# 
-
-# APPIMAGE
-# obsidian (see if a AUR via yay package works)
-
-# CUSTOM
-# 1password (see website)
-# zplug (curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh) 
+# obsidian
 # alacritty
+# pamac build 1password (requires keys first see install docs)
+# pamac build zplug (or curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh) 
+# pamac build spotify (AUR currently broken used --editmenu)
+#    # consider spotify-player for rofi sometime

@@ -109,6 +109,7 @@ source $HOME/.dots/shared/scripts/loader.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+export BROWSER="/usr/bin/firefox"
 alias zload="source $HOME/.zshrc"
 
 
