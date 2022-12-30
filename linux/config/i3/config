@@ -28,14 +28,12 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal 
-# using alacritty instead of terminal; zsh-vi-mode compatability
 bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start program launcher
-# edited default `bindsym $mod+d exec --no-startup-id dmenu_recency`
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 

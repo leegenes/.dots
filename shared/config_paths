@@ -1,3 +1,3 @@
-LOCAL_CONFIG_DIR=$HOME/.config
-DOTS_DIR=$HOME/.dots
-DOTS_DIR_SHARED=$DOTS_DIR/shared
+export LOCAL_CONFIG_DIR=$HOME/.config
+export DOTS_DIR=$HOME/.dots
+export DOTS_DIR_SHARED=$DOTS_DIR/shared

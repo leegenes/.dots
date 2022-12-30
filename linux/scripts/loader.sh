@@ -5,4 +5,4 @@
 # - uninstall xcape
 # kmonad is an option if you end up caring enough
 setxkbmap -option caps:ctrl_modifier 
-xcape -e 'Caps_Lock=Escape' -t 100
+xcape -e 'Caps_Lock=Escape' -t 125
