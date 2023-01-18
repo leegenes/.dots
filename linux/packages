@@ -13,6 +13,10 @@
 # xcape
 # obsidian
 # alacritty
+# noto-fonts-emojis
+# pyenv
+# python-pipenv
+# calibre
 # pamac build 1password (requires keys first see install docs)
 # pamac build zplug (or curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh) 
 # pamac build spotify (AUR currently broken used --editmenu)
