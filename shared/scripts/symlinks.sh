@@ -1,5 +1,5 @@
 # LOAD PATH VARIABLES
-source $HOME/.dots/shared/config_paths
+source $HOME/dots/shared/config_paths
 
 
 # MAKE SYMLINKS
@@ -7,4 +7,4 @@ source $HOME/.dots/shared/config_paths
 ln -s $DOTS_DIR_SHARED/config/git/gitconfig $HOME/.gitconfig
 ln -s $DOTS_DIR_SHARED/config/git/gitignore $HOME/.gitignore
 ln -s $DOTS_DIR_SHARED/config/zsh/config $HOME/.zshrc
-ln -s $DOTS_DIR_SHARED/config/p10k $LOCAL_CONFIG_DIR/p10k
+ln -s $DOTS_DIR_SHARED/config/p10k/config $LOCAL_CONFIG_DIR/p10k/config

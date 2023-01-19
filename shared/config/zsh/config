@@ -82,7 +82,7 @@ ZSH_THEME="robbyrussell"
 # plugins=(git)
 # using zplug for plugins in shared loader.sh
 
-source $HOME/.dots/shared/scripts/loader.sh
+source $HOME/dots/shared/scripts/loader.sh
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -111,8 +111,18 @@ source $HOME/.dots/shared/scripts/loader.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export BROWSER="/usr/bin/firefox"
 alias zload="source $HOME/.zshrc"
+
+alias ..="cd .."
+alias ~="cd $HOME"
+
+bindkey -s '^f' 'fzf_cd^M'
+
+fzf_cd() {
+ cd "$(find $HOME/ -maxdepth 3 -type d -not -path '*/.*' | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" 
+}
+
+export BROWSER="/usr/bin/firefox"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -124,4 +134,4 @@ eval "$(rbenv init -)"
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-source $HOME/.dots/shared/config/p10k/config
+source $HOME/dots/shared/config/p10k/config
