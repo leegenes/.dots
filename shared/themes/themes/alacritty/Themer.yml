@@ -1,5 +1,5 @@
-font:
-  size: 8
+
+# Themer Alacritty
 
 schemes:
   themer-dark: &dark
@@ -88,5 +88,4 @@ schemes:
       magenta: '#C6469B'
       cyan: '#21A582'
       white: '#a29da3'
-
-colors: *dark
+  
