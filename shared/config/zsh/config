@@ -80,9 +80,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-# using zplug for plugins in shared loader.sh
-
-source $HOME/dots/shared/scripts/loader.sh
 
 # source $ZSH/oh-my-zsh.sh
 
@@ -111,6 +108,28 @@ source $HOME/dots/shared/scripts/loader.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+source $HOME/dots/shared/config_paths
+
+# ZPLUG
+source ~/.zplug/init.zsh
+
+zplug "romkatv/powerlevel10k", as:theme, depth:1
+zplug "jeffreytse/zsh-vi-mode"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/z", from:oh-my-zsh
+zplug "ohmyzsh/ohmyzsh", use:"plugins/git/git.plugin.zsh"
+
+# Actually install plugins, prompt user input
+if ! zplug check --verbose; then
+    printf "Install zplug plugins? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+zplug load
+
 alias zload="source $HOME/.zshrc"
 
 alias ..="cd .."
@@ -119,25 +138,31 @@ alias vpn="expressvpn"
 alias vpnc="vpn connect" 
 alias vpnd="vpn disconnect" 
 alias vpns="vpn status"
-
-
+alias cdf="fzf_cd"
 bindkey -s '^f' 'fzf_cd^M'
 
+# cd to directory selected from fzf
+#  - find directories not prefixed with `.` starting from $HOME
+#  - show in fzf
+#  - pipe fzf selection to cd
 fzf_cd() {
  cd "$(find $HOME/ -maxdepth 3 -type d -not -path '*/.*' | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)" 
 }
 
-export BROWSER="/usr/bin/firefox"
-
+# pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
+# rbenv
 eval "$(rbenv init -)"
+# NVM
+source /usr/share/nvm/init-nvm.sh
 
+
+# TODO: fork on os becuase this would break on macos
+source $DOTS_DIR/linux/scripts/loader.sh
+export BROWSER="/usr/bin/firefox"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 source $HOME/dots/shared/config/p10k/config
-source /usr/share/nvm/init-nvm.sh
