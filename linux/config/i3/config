@@ -303,24 +303,24 @@ exec_always --no-startup-id fix_xcursor
 # to:
 # background $term_background
 # Same logic applied to everything else.
-set_from_resource $term_background background
-set_from_resource $term_foreground foreground
-set_from_resource $term_color0     color0
-set_from_resource $term_color1     color1
-set_from_resource $term_color2     color2
-set_from_resource $term_color3     color3
-set_from_resource $term_color4     color4
-set_from_resource $term_color5     color5
-set_from_resource $term_color6     color6
-set_from_resource $term_color7     color7
-set_from_resource $term_color8     color8
-set_from_resource $term_color9     color9
-set_from_resource $term_color10    color10
-set_from_resource $term_color11    color11
-set_from_resource $term_color12    color12
-set_from_resource $term_color13    color13
-set_from_resource $term_color14    color14
-set_from_resource $term_color15    color15
+set_from_resource $term_background i3wm.background
+set_from_resource $term_foreground i3wm.foreground
+set_from_resource $term_color0     i3wm.color0
+set_from_resource $term_color1     i3wm.color1
+set_from_resource $term_color2     i3wm.color2
+set_from_resource $term_color3     i3wm.color3
+set_from_resource $term_color4     i3wm.color4
+set_from_resource $term_color5     i3wm.color5
+set_from_resource $term_color6     i3wm.color6
+set_from_resource $term_color7     i3wm.color7
+set_from_resource $term_color8     i3wm.color8
+set_from_resource $term_color9     i3wm.color9
+set_from_resource $term_color10    i3wm.color10
+set_from_resource $term_color11    i3wm.color11
+set_from_resource $term_color12    i3wm.color12
+set_from_resource $term_color13    i3wm.color13
+set_from_resource $term_color14    i3wm.color14
+set_from_resource $term_color15    i3wm.color15
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
@@ -338,16 +338,16 @@ bar {
 	strip_workspace_numbers yes
 
     colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+        background $term_background
+        statusline $term_foreground
+        separator  $term_color4
 
-#                      border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
-        active_workspace   #595B5B #353836 #FDF6E3
-        inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+#                          border           backgr.          text
+        focused_workspace  $term_color4     $term_color4     $term_background
+        active_workspace   #595B5B          #353836          #FDF6E3
+        inactive_workspace $term_background $term_background $term_foreground
+        binding_mode       #16a085          #2C2C2C          #F9FAF9
+        urgent_workspace   $term_color1     $term_background $term_color1
     }
 }
 
@@ -355,11 +355,12 @@ bar {
 bindsym $mod+m bar mode toggle
 
 # Theme colors
-# class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+# probably need to be more of a power user for the remaining colors
+# class                   border       backgr. text    indic.  child_border
+  client.focused          $term_color4 #556064 #80FFF9 #FDF6E3 $term_color4
+  client.focused_inactive $term_color4 #2F3D44 #1ABC9C #454948 $term_color0
+  client.unfocused        $term_color4 #2F3D44 #1ABC9C #454948 $term_color0
+  client.urgent           $term_color4 #FDF6E3 #1ABC9C #268BD2 $term_color1
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
   client.background       #2B2C2B
