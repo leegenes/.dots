@@ -1,5 +1,7 @@
 font:
-  size: 8
+  size: 9
+  normal: 
+    family: "Fira Mono"
 
 schemes:
   themer-dark: &dark

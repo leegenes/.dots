@@ -16,12 +16,9 @@ XTerm*selectToClipboard: true
 
 *fading:                          8
 *fadeColor:                       black
-! *cursorColor:                     #1ABB9B
-! *pointerColorBackground:          #2B2C2B
-! *pointerColorForeground:          #16A085
 *cursorColor:                     #1ABB9B
-*pointerColorBackground:          rgb:1b/a6/fa
-*pointerColorForeground:          rgb:45/b4/f7
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
 
 ! general
 *background: #292C3E
@@ -57,7 +54,7 @@ XTerm*selectToClipboard: true
 
 ! whites
 *color7: #cfd0d2
-*color15: ebebeb
+*color15: #ebebeb
 
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0
