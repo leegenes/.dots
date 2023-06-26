@@ -25,7 +25,7 @@ bindsym $mod+n border normal
 font xft:FiraMono SemiBold 10
 
 # Use Mouse+$mod to drag floating windows
-floating_modifier $mod
+floating_modifier Ctrl
 
 # start a terminal 
 bindsym $mod+Return exec alacritty
@@ -59,7 +59,7 @@ bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox
+bindsym $mod+F2 exec vivaldi-stable
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -67,20 +67,21 @@ bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym $mod+Shift+p exec flameshot gui
+# bindsym Print exec --no-startup-id i3-scrot
+# bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
+# bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+Ctrl+space exec --no-startup-id emoji-picker
 
-# focus_follows_mouse no
+focus_follows_mouse no
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -106,7 +107,7 @@ bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
 # split orientation
-bindsym $mod+h split h;exec notify-send 'tile horizontally'
+bindsym $mod+m split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
 bindsym $mod+q split toggle
 
@@ -195,10 +196,14 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
+# Floating windows (well, Nitrogen) floats up on subsequent launches
+# center a window to be able to reach the title bar
+bindsym $mod+c move position center
+
 # Open applications on specific workspaces
-assign [class="alacritty"] $ws1
+assign [class="Alacritty"] $ws1
 assign [class="code-oss"] $ws2
-assign [class="firefox"] $ws3
+assign [window_role="vivaldi*"] $ws3
 assign [class="obsidian"] $ws7
 
 # Open specific applications in floating mode
@@ -229,6 +234,7 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+for_window [window_role="pop-up"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -300,7 +306,7 @@ exec --no-startup-id expressvpn
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker "blurlock; xset dpms force off"
-exec --no-startup-id two-screen
+exec --no-startup-id autorandr -c
 exec --no-startup-id nscroll
 # exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
@@ -366,15 +372,16 @@ bar {
 }
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+# removed to avoid collision with wanting mod+m for horizontal tile; because symmetry
+# bindsym $mod+m bar mode toggle
 
 # Theme colors
 # probably need to be more of a power user for the remaining colors
-# class                   border       backgr. text    indic.  child_border
-  client.focused          $term_color4 #556064 #80FFF9 #FDF6E3 $term_color4
-  client.focused_inactive $term_color4 #2F3D44 #1ABC9C #454948 $term_color0
-  client.unfocused        $term_color4 #2F3D44 #1ABC9C #454948 $term_color0
-  client.urgent           $term_color4 #FDF6E3 #1ABC9C #268BD2 $term_color1
+# class                   border       background   text             indicator    child_border
+  client.focused          $term_color4 $term_color4 $term_background $term_color4 $term_color4
+  client.focused_inactive $term_color0 $term_color0 $term_foreground $term_color4 $term_color0
+  client.unfocused        $term_color0 $term_color0 $term_foreground $term_color4 $term_color0
+  client.urgent           $term_color3 $term_color0 $term_color1     $term_color4 $term_color1
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
   client.background       #2B2C2B

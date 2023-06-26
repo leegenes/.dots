@@ -1,0 +1,61 @@
+{
+  "alfredtheme": {
+    "result": {
+      "textSpacing": 6,
+      "subtext": {
+        "size": 12,
+        "colorSelected": "#3F3A30FF",
+        "font": "System Light",
+        "color": "#9E9C86FF"
+      },
+      "shortcut": {
+        "size": 16,
+        "colorSelected": "#3F3A30FF",
+        "font": "System",
+        "color": "#DEDDC0FF"
+      },
+      "backgroundSelected": "#639587FF",
+      "text": {
+        "size": 18,
+        "colorSelected": "#1F1913FF",
+        "font": "System Light",
+        "color": "#FEFEDDFF"
+      },
+      "iconPaddingHorizontal": 6,
+      "paddingVertical": 6,
+      "iconSize": 36
+    },
+    "search": {
+      "paddingVertical": 8,
+      "background": "#5F5A4D7F",
+      "spacing": 10,
+      "text": {
+        "size": 22,
+        "colorSelected": "#517665FF",
+        "font": "System",
+        "color": "#FEFEDDFF"
+      },
+      "backgroundSelected": "#8E5252FF"
+    },
+    "window": {
+      "color": "#1F1913CC",
+      "paddingHorizontal": 10,
+      "width": 560,
+      "borderPadding": 0,
+      "borderColor": "#1F191300",
+      "blur": 15,
+      "roundness": 2,
+      "paddingVertical": 10
+    },
+    "credit": "Themer",
+    "separator": {
+      "color": "#1F191300",
+      "thickness": 0
+    },
+    "scrollbar": {
+      "color": "#FFCF86FF",
+      "thickness": 2
+    },
+    "name": "Themer Green as a Whistle Dark"
+  }
+}

@@ -20,41 +20,42 @@ XTerm*selectToClipboard: true
 *pointerColorBackground:          #2B2C2B
 *pointerColorForeground:          #16A085
 
+# generated with themer.dev
 ! general
-*background: #292C3E
-*foreground: #cfd0d2
+*background: #1f1913
+*foreground: #deddc0
 
 ! blacks
-*color0: #60636f
-*color8: #7c7e88
+*color0: #5f5a4d
+*color8: #7f7b6a
 
 ! reds
-*color1: #ff301b
-*color9: #fb5545
+*color1: #994643
+*color9: #ad6b62
 
 ! greens
-*color2: #a0e521
-*color10: #afe649
+*color2: #4b8075
+*color10: #6f998a
 
 ! yellows
-*color3: #ffc620
-*color11: #fbcd49
+*color3: #ffcf86
+*color11: #ffd897
 
 ! blues
-*color4: #1ba6fa
-*color12: #45b4f7
+*color4: #517665
+*color12: #74917d
 
 ! magentas
-*color5: #b100b1
-*color13: #bd2fbd
+*color5: #8e5252
+*color13: #a4746e
 
 ! cyans
-*color6: #21deeef
-*color14: #49e1ee
+*color6: #639587
+*color14: #82aa98
 
 ! whites
-*color7: #cfd0d2
-*color15: #ebebeb
+*color7: #deddc0
+*color15: #fefedd
 
 Xcursor.theme: xcursor-breeze
 Xcursor.size:                     0

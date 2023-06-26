@@ -1,0 +1,79 @@
+# Themer Green as a Whistle
+
+schemes:
+  themer-green-as-a-whistle-dark: &dark
+    primary:
+      background: "#1F1913"
+      foreground: "#DEDDC0"
+    cursor:
+      text: "#1F1913"
+      cursor: "#8B596A"
+    selection:
+      text: "#1F1913"
+      background: "#517665"
+    normal:
+      black: "#5F5A4D"
+      red: "#994643"
+      green: "#4B8075"
+      yellow: "#FFCF86"
+      blue: "#517665"
+      magenta: "#8E5252"
+      cyan: "#639587"
+      white: "#DEDDC0"
+    bright:
+      black: "#7F7B6A"
+      red: "#AD6B62"
+      green: "#6F998A"
+      yellow: "#FFD897"
+      blue: "#74917D"
+      magenta: "#A4746E"
+      cyan: "#82AA98"
+      white: "#FEFEDD"
+    dim:
+      black: "#3F3A30"
+      red: "#813D39"
+      green: "#426B61"
+      yellow: "#D2AB6F"
+      blue: "#476355"
+      magenta: "#784745"
+      cyan: "#557C70"
+      white: "#BEBDA3"
+  themer-green-as-a-whistle-light: &light
+    primary:
+      background: "#FCFAF1"
+      foreground: "#393F3B"
+    cursor:
+      text: "#FCFAF1"
+      cursor: "#786366"
+    selection:
+      text: "#FCFAF1"
+      background: "#4D7260"
+    normal:
+      black: "#393F3B"
+      red: "#8F4053"
+      green: "#4E8579"
+      yellow: "#CFA253"
+      blue: "#4D7260"
+      magenta: "#9F5E58"
+      cyan: "#8CB3A0"
+      white: "#BBBCB4"
+    bright:
+      black: "#5A5E5A"
+      red: "#A56573"
+      green: "#719C91"
+      yellow: "#D8B473"
+      blue: "#708D7D"
+      magenta: "#B27D77"
+      cyan: "#A2C1B0"
+      white: "#DCDBD3"
+    dim:
+      black: "#19201D"
+      red: "#773A48"
+      green: "#437167"
+      yellow: "#AB8848"
+      blue: "#436253"
+      magenta: "#84524C"
+      cyan: "#759686"
+      white: "#9B9D96"
+
+colors: *dark

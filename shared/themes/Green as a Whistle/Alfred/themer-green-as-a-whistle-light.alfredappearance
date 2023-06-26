@@ -1,0 +1,61 @@
+{
+  "alfredtheme": {
+    "result": {
+      "textSpacing": 6,
+      "subtext": {
+        "size": 12,
+        "colorSelected": "#DCDBD3FF",
+        "font": "System Light",
+        "color": "#7A7D78FF"
+      },
+      "shortcut": {
+        "size": 16,
+        "colorSelected": "#DCDBD3FF",
+        "font": "System",
+        "color": "#393F3BFF"
+      },
+      "backgroundSelected": "#8CB3A0FF",
+      "text": {
+        "size": 18,
+        "colorSelected": "#FCFAF1FF",
+        "font": "System Light",
+        "color": "#19201DFF"
+      },
+      "iconPaddingHorizontal": 6,
+      "paddingVertical": 6,
+      "iconSize": 36
+    },
+    "search": {
+      "paddingVertical": 8,
+      "background": "#BBBCB47F",
+      "spacing": 10,
+      "text": {
+        "size": 22,
+        "colorSelected": "#4D7260FF",
+        "font": "System",
+        "color": "#19201DFF"
+      },
+      "backgroundSelected": "#9F5E58FF"
+    },
+    "window": {
+      "color": "#FCFAF1CC",
+      "paddingHorizontal": 10,
+      "width": 560,
+      "borderPadding": 0,
+      "borderColor": "#FCFAF100",
+      "blur": 15,
+      "roundness": 2,
+      "paddingVertical": 10
+    },
+    "credit": "Themer",
+    "separator": {
+      "color": "#FCFAF100",
+      "thickness": 0
+    },
+    "scrollbar": {
+      "color": "#CFA253FF",
+      "thickness": 2
+    },
+    "name": "Themer Green as a Whistle Light"
+  }
+}
