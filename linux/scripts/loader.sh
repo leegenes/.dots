@@ -9,17 +9,5 @@ source $HOME/dots/linux/config_paths
 setxkbmap -option caps:ctrl_modifier 
 xcape -e 'Caps_Lock=Escape' -t 125
 
-alias nscroll=ensure_natural_scroll
+# enable natural scrolling on all devices
 nscroll
-
-
-# enabled natural scrolling for input devices
-function ensure_natural_scroll() {
-	devices=( 'Synaptics TouchPad' 'MX Ergo' )
-	setting="libinput Natural Scrolling Enabled"
-  for device_search in "$devices[@]"
-	do
-		device_name="$(xinput list --name-only | grep "$device_search")"
-		if [ -n "$device_name" ]; then xinput set-prop "$device_name" "$setting" 1; fi
-	done
-}
