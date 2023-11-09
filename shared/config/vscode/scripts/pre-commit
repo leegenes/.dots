@@ -1,0 +1,6 @@
+#! /bin/sh
+
+if [ "$PWD" = "$DOTS_DIR" ]; then
+  source "$DOTS_DIR_SHARED"/config/vscode/scripts/get_extensions.sh
+  git add "$DOTS_DIR_SHARED"/config/vscode/installed_extensions.txt
+fi

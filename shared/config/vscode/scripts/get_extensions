@@ -1,0 +1,5 @@
+#! /bin/sh
+
+filename="$DOTS_DIR_SHARED"/config/vscode/installed_extensions.txt
+echo "Writing extensions to $filename"
+code --list-extensions > "$filename"

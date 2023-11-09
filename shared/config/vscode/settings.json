@@ -1,0 +1,22 @@
+{
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Themer Green as a Whistle Dark",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.fontFamily": "'Fira Code','Droid Sans Mono', 'monospace', monospace",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": -1,
+    "python.defaultInterpreterPath": "/home/leegenes/.local/share/virtualenvs/outside-0-r0mTmj",
+    "bracket-pair-colorizer-2.colors": [
+        "#4b8075",
+        "#8e5252",
+        "#deddc0",
+        "#ffcf86"
+    ],
+    "bracket-pair-colorizer-2.colorMode": "Consecutive",
+    "bracket-pair-colorizer-2.highlightActiveScope": true,
+    "bracket-pair-colorizer-2.showBracketsInGutter": true,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+}
