@@ -1,0 +1,2 @@
+#! /usr/bin/zsh
+feh --bg-scale ~/dots/shared/static/transparent.png

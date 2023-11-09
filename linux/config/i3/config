@@ -25,7 +25,7 @@ bindsym $mod+n border normal
 font xft:FiraMono SemiBold 10
 
 # Use Mouse+$mod to drag floating windows
-floating_modifier Ctrl
+floating_modifier $mod
 
 # start a terminal 
 bindsym $mod+Return exec alacritty
@@ -203,7 +203,7 @@ bindsym $mod+c move position center
 # Open applications on specific workspaces
 assign [class="Alacritty"] $ws1
 assign [class="code-oss"] $ws2
-assign [window_role="vivaldi*"] $ws3
+assign [class="Vivaldi-stable"] $ws3
 assign [class="obsidian"] $ws7
 
 # Open specific applications in floating mode
@@ -220,7 +220,7 @@ for_window [class="Lxappearance"] floating enable sticky enable border normal
 for_window [class="Manjaro-hello"] floating enable
 for_window [class="Manjaro Settings Manager"] floating enable border normal
 for_window [title="MuseScore: Play Panel"] floating enable
-for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Nitrogen"] move position center floating enable sticky enable border normal
 for_window [class="Oblogout"] fullscreen enable
 for_window [class="octopi"] floating enable
 for_window [title="About Pale Moon"] floating enable
@@ -230,7 +230,6 @@ for_window [class="qt5ct"] floating enable sticky enable border normal
 for_window [class="Qtconfig-qt4"] floating enable sticky enable border normal
 for_window [class="Simple-scan"] floating enable border normal
 for_window [class="(?i)System-config-printer.py"] floating enable border normal
-for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
@@ -294,22 +293,17 @@ bindsym $mod+9 exec --no-startup-id blurlock 10
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec_always --no-startup-id feh --bg-scale ~/dots/shared/themes/Green\ as\ a\ Whistle/Circuits\ wallpaper/themer-green-as-a-whistle-dark-2880x1800.svg; sleep 1; picom -b
 exec --no-startup-id manjaro-hello
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id expressvpn
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker "blurlock; xset dpms force off"
 exec --no-startup-id autorandr -c
-exec --no-startup-id nscroll
-# exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec --no-startup-id nscroll
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
